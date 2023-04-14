@@ -23,7 +23,7 @@ app.use(Express.static(__dirname+'/public'));
 
 
 // app.get('/', (req, res) => {
-//     res.send('<!DOCTYPE html><html><head><mete content="text/html; charset=utf-8" http-equiv="Content-Type"></mete><title>修改步数</title></head><body><h1>欢迎使用</h1></body></html>')
+//     res.send('<!DOCTYPE html><html><head><mete content="text/html; charset=utf-8" http-equiv="Content-Type"></mete><title>步数修改</title></head><body><h1>欢迎使用</h1></body></html>')
 // })
 
 app.all('/step', step)
