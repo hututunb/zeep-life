@@ -6,7 +6,7 @@
   <link rel="icon" href="./favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script> -->
-  <title>修改步数</title>
+  <title>步数修改</title>
   <style>
     :root {
       --color-primary: #5c7cfa;
@@ -213,31 +213,31 @@
 
 <body>
   <header>
-    <h1>修改步数</h1>
+    <h1>步数修改</h1>
   </header>
   <main x-data="app" x-cloak>
     <p x-show.transition.opacity="alert" :class="alert?.type" x-text="alert?.message"></p>
-    <input placeholder="输入账号..." x-model="u" /></p>
-    <input placeholder="输入密码..." x-model="p" />
+    <input placeholder="请输入zepp账号..." x-model="u" /></p>
+    <input placeholder="请输入zepp密码..." x-model="p" />
     <details>
       <summary>自定义步数</summary>
       <div>
         <input placeholder="输入要修改的步数..." x-model="s" />
-        <small>默认是随机修改12000-22000。</small>
+        <small>系统默认是随机修改10000-20000。</small>
       </div>
     </details>
     <button :class="{ loading }" :disabled="loading"  @click="submit($refs)">修改</button> </p>
   </main>
   <div id="tip">
-    下载<a href="https://www.coolapk.com/apk/com.xiaomi.hm.health" >「Zeep Life 」（原小米运动）</a>，下载完成后，输入自己的手机号或邮箱进行注册，记住密码。</p>
-    登录后进入到「我的」- 「第三方接入」，「点击微信」按照流程扫码授权绑定至微信。（也可绑定支付宝或QQ）</p>
-    使用注册的「Zeep Life 」账号密码，输入自定义步数提交即可成功！</p>
+    下载<a href="https://app.xiaomi.com/details?id=com.xiaomi.hm.health" >[Zepp Life]</a>，下载完成后，输入自己的手机号或邮箱进行注册，记住保存密码。</p>
+    登录后进入到[我的]- [第三方接入]，[点击微信]按照流程扫码授权绑定至微信,(也可绑定支付宝或QQ）</p>
+    使用注册的[Zeep Life]账号密码，输入自定义步数提交即可成功！</p>
   </div>
 
 
    <footer>
     <p x-data="ip" x-init="$nextTick(() => {getipinfo()})" x-show.transition.opacity="ipinfo" x-text="ipinfo"></p>
-    <i><a href="https://github.com/x-dr/editStep">By 小东</a>
+    <i></a> Made By 杨航小哥哥  </a>
     </i>
   </footer>
   <script src="alpine.js"></script>
@@ -280,7 +280,7 @@
       submit($refs) {
         // console.log(this);
         if (!this.u) {
-          this.alert = { type: 'error', message: '输入小米运动app账号...' }
+          this.alert = { type: 'error', message: '输入zepp life账号...' }
           return
         }
 
@@ -290,7 +290,7 @@
         }
 
         if (this.isValidated()) {
-          this.alert = { type: 'error', message: '非法账号格式' }
+          this.alert = { type: 'error', message: '账号格式错误' }
           return
         }
 
