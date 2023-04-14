@@ -1,7 +1,7 @@
 {
   "name": "editstep",
   "version": "1.0.0",
-  "description": "zeep life (小米运动) 刷步数，支持邮箱/手机账号 ",
+  "description": "zeep life刷步数，支持邮箱/手机账号 ",
   "main": "index.js",
   "type": "module",
   "scripts": {
